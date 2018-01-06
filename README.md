@@ -1,6 +1,8 @@
 # 11ty-logo
 
-Logo built in web tech
+11ty logo built for a browser. 
+
+![11ty or eleventy](logo.png)
 
 ## Build
 
