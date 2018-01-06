@@ -1,0 +1,106 @@
+---
+fonts:
+  - BenchNine
+  - Quattrocento Sans
+  - Poppins
+  - Merriweather
+  - Ranga
+  - Mukta Malar
+  - Slabo 27px
+  - Catamaran
+  - Yanone Kaffeesatz
+  - Pacifico
+  - Archivo Black
+  - Kanit
+  - Ropa Sans
+  - Pathway Gothic One
+  - Shrikhand
+  - Satisfy
+  - Bungee
+  - Teko
+  - Cambo
+  - Alfa Slab One
+  - Kalam
+  - Jura
+  - Fredoka One
+  - Sedgwick Ave Display
+  - Crete Round
+---
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>11ty Logo</title>
+{%- for font in fonts %}
+    <link href="https://fonts.googleapis.com/css?family={{ font | urlencode }}" rel="stylesheet">
+{% endfor -%}
+		<style>
+		.variation {
+			display: inline-block;
+			font-size: 7em;
+			padding: 26px 12px;
+			margin: 0 .15em .5em;
+			color: #222;
+			cursor: pointer;
+		}
+		.dark {
+			background-color: #222;
+			color: #fff;
+			border: 6px solid transparent;
+		}
+		.highlight {
+			outline: 6px solid red;
+		}
+		.group {
+			border-bottom: 1px solid #bbb;
+			padding: 1em 0;
+			margin-bottom: 2em;
+		}
+
+		/* logo */
+		.logo span {
+			float: left;
+		}
+		.logo span:first-child {
+			letter-spacing: -6px;
+		}
+		.logo span:first-child + span {
+			margin-left: 0;
+			letter-spacing: -2.5px;
+		}
+		</style>
+	</head>
+	<body>
+		<h1>11ty Logo</h1>
+		<h3 class="logo variation dark" style="font-family: BenchNine;"><span>11</span><span>ty</span></h3>
+
+		<h2>Variations</h2>
+{%- set count = 0 -%}
+{%- for font in fonts -%}
+{%- set count = count + 1 -%}
+		<div class="group">
+	    <h3 class="variation dark" style="font-family: {{ font }}">11ty</h3>
+{%- for font2 in fonts -%}
+{%- if font != font2 -%}
+{%- set count = count + 1 -%}
+    	<h3 class="variation dark"><span style="font-family: {{ font }}">11</span><span style="font-family: {{ font2 }}">ty</span></h3>
+{%- endif -%}
+{%- endfor -%}
+		</div>
+{%- endfor -%}
+		<h2>Total: {{ count }}</h2>
+		<script>
+		document.addEventListener("click", function(e) {
+			var tgt = e.target;
+			if( e.target.tagName === "SPAN" ) {
+				tgt = e.target.parentNode;
+			}
+			if( tgt.tagName === "H2" ) {
+				// tgt.parentNode.removeChild(tgt);
+				tgt.classList.toggle("highlight");
+			}
+		}, false);
+		</script>
+	</body>
+</html>
