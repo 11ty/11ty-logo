@@ -1,6 +1,6 @@
 {
   "name": "@11ty/logo",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "11ty logo built for a browser.",
   "main": "logo.png",
   "scripts": {
