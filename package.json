@@ -4,7 +4,7 @@
   "description": "11ty logo built for a browser. ",
   "main": "index.js",
   "scripts": {
-    "default": "eleventy --formats=njk && cp logo.css _site/"
+    "default": "npx eleventy --formats=njk && cp logo.css _site/"
   },
   "repository": {
     "type": "git",
@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/11ty/11ty-logo/issues"
   },
-  "homepage": "https://github.com/11ty/11ty-logo#readme"
+  "homepage": "https://github.com/11ty/11ty-logo#readme",
+  "dependencies": {
+    "eleventy-cli": "^0.1.9"
+  }
 }
