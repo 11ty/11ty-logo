@@ -10,6 +10,9 @@ font: BenchNine
 		<link href="https://fonts.googleapis.com/css?family={{ font | urlencode }}" rel="stylesheet">
 		<link rel="stylesheet" href="../logo.css">
 		<style>
+		* {
+			box-sizing: border-box;
+		}
 		html,
 		body {
 			text-align: center;
@@ -30,6 +33,7 @@ font: BenchNine
 		}
 		/* Logo */
 		.logo {
+			font-family: {{ font }};
 			font-size: 50vh;
 			margin: 0;
 		}
@@ -49,6 +53,6 @@ font: BenchNine
 	<body>
 		<h1>11ty Logo</h1>
 		<p><a href="../variations/">All Variations</a></p>
-		<h2 class="logo variation dark" style="font-family: BenchNine;"><span>11</span><span>ty</span></h2>
+		<h2 class="logo variation dark"><span>11</span><span>ty</span></h2>
 	</body>
 </html>

@@ -18,16 +18,14 @@ let server = connect().use(serveStatic(sitePath)).listen(8080, async function() 
 		height: 1200,
 		deviceScaleFactor: 2
 	});
-	await page.screenshot({
+
+	// Save just logo
+	const logoEl = await page.$(".logo");
+	await logoEl.screenshot({
 		path: IMAGE_FILENAME,
-		omitBackground: true,
-		clip: {
-			x: 200,
-			y: 0,
-			width: 1200,
-			height: 1093
-		}
+		omitBackground: true
 	});
+
 	await browser.close();
 
 	server.close();
