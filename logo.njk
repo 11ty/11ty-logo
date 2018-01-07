@@ -8,9 +8,31 @@ font: BenchNine
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>11ty Logo</title>
 		<link href="https://fonts.googleapis.com/css?family={{ font | urlencode }}" rel="stylesheet">
-		<link rel="stylesheet" href="logo.css">
+		<link rel="stylesheet" href="../logo.css">
 		<style>
+		html,
+		body {
+			text-align: center;
+			padding: 0;
+			margin: 0;
+		}
+		h1,
+		p {
+			position: absolute;
+			top: .5rem;
+			margin: 0;
+		}
+		h1 {
+			left: .5rem;
+		}
+		p {
+			right: .5rem;
+		}
 		/* Logo */
+		.logo {
+			font-size: 50vh;
+			margin: 0;
+		}
 		.logo span {
 			float: left;
 		}
@@ -26,7 +48,7 @@ font: BenchNine
 	</head>
 	<body>
 		<h1>11ty Logo</h1>
-		<p><a href="variations/">See all variations.</a></p>
+		<p><a href="../variations/">All Variations</a></p>
 		<h2 class="logo variation dark" style="font-family: BenchNine;"><span>11</span><span>ty</span></h2>
 	</body>
 </html>

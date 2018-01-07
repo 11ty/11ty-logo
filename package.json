@@ -1,10 +1,11 @@
 {
   "name": "@11ty/logo",
   "version": "1.0.0",
-  "description": "11ty logo built for a browser. ",
-  "main": "index.js",
+  "description": "11ty logo built for a browser.",
+  "main": "logo.png",
   "scripts": {
-    "default": "npx eleventy --formats=njk && cp logo.css _site/"
+    "default": "npx eleventy --formats=njk && cp logo.css _site/",
+    "image": "npm run default && node src/image.js"
   },
   "repository": {
     "type": "git",
@@ -22,5 +23,10 @@
   "homepage": "https://github.com/11ty/11ty-logo#readme",
   "dependencies": {
     "eleventy-cli": "^0.1.9"
+  },
+  "devDependencies": {
+    "connect": "^3.6.5",
+    "serve-static": "^1.13.1",
+    "puppeteer": "^0.13.0"
   }
 }

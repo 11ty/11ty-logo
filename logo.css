@@ -1,7 +1,7 @@
 .variation {
 	display: inline-block;
-	font-size: 7em;
-	padding: 26px 12px;
+	font-size: 7em; /* 112px */
+	padding: 0.2321428571429em 0.1071428571429em; /* 26px 12px /112 */
 	margin: 0 .15em .5em;
 	color: #222;
 	cursor: pointer;

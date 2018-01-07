@@ -8,6 +8,16 @@
 
 Build variations using [`eleventy`](https://github.com/11ty/eleventy).
 
+### Generate templates
+
 ```
-eleventy --formats=njk && cp logo.css _site/
+npm run default
+```
+
+### Automatically generate a transparent background logo image
+
+Uses headless Chrome and Puppeteer
+
+```
+npm run image
 ```
