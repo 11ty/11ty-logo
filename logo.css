@@ -1,0 +1,21 @@
+.variation {
+	display: inline-block;
+	font-size: 7em;
+	padding: 26px 12px;
+	margin: 0 .15em .5em;
+	color: #222;
+	cursor: pointer;
+}
+.dark {
+	background-color: #222;
+	color: #fff;
+	border: 6px solid transparent;
+}
+.highlight {
+	outline: 6px solid red;
+}
+.group {
+	border-bottom: 1px solid #bbb;
+	padding: 1em 0;
+	margin-bottom: 2em;
+}

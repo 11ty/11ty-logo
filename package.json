@@ -1,0 +1,23 @@
+{
+  "name": "@11ty/logo",
+  "version": "1.0.0",
+  "description": "11ty logo built for a browser. ",
+  "main": "index.js",
+  "scripts": {
+    "default": "eleventy --formats=njk && cp logo.css _site/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/11ty/11ty-logo.git"
+  },
+  "author": {
+    "name": "Zach Leatherman",
+    "email": "zachleatherman@gmail.com",
+    "url": "https://zachleat.com/"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/11ty/11ty-logo/issues"
+  },
+  "homepage": "https://github.com/11ty/11ty-logo#readme"
+}

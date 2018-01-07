@@ -9,5 +9,5 @@
 Build variations using [`eleventy`](https://github.com/11ty/eleventy).
 
 ```
-eleventy --formats=njk
+eleventy --formats=njk && cp logo.css _site/
 ```
