@@ -10,8 +10,8 @@ let server = connect().use(serveStatic(sitePath)).listen(8080, async function() 
 
 	const browser = await puppeteer.launch();
 	const page = await browser.newPage();
-	await page.goto("http://localhost:8080/logo/index.html", {
-		waitUntil: "load"
+	await page.goto("http://localhost:8080/logo.html", {
+		waitUntil: ["load", "networkidle0"]
 	});
 	await page.setViewport({
 		width: 1600,
@@ -21,14 +21,17 @@ let server = connect().use(serveStatic(sitePath)).listen(8080, async function() 
 
 	// Save just logo
 	const logoEl = await page.$(".logo");
-	await logoEl.screenshot({
-		path: IMAGE_FILENAME,
-		omitBackground: true
-	});
+	if( !logoEl ) {
+		console.error("Could not find the .logo element!");
+	} else {
+		await logoEl.screenshot({
+			path: IMAGE_FILENAME,
+			omitBackground: true
+		});
+		console.log( `Screenshot saved to ${IMAGE_FILENAME}.` );
+	}
 
 	await browser.close();
-
 	server.close();
-	console.log( `Screenshot saved to ${IMAGE_FILENAME}.` );
 });
 
