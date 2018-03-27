@@ -11,6 +11,9 @@
 	color: #fff;
 	border: 6px solid transparent;
 }
+.bg-img {
+	background-color: transparent;
+}
 .highlight {
 	outline: 6px solid red;
 }

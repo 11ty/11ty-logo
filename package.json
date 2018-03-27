@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/11ty/11ty-logo#readme",
   "dependencies": {
-    "@11ty/eleventy": "^0.2.7"
+    "@11ty/eleventy": "^0.3.0"
   },
   "devDependencies": {
     "connect": "^3.6.5",
