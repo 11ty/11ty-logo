@@ -1,6 +1,6 @@
 {
   "name": "@11ty/logo",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "11ty logo built for a browser.",
   "main": "logo.png",
   "scripts": {
@@ -21,10 +21,8 @@
     "url": "https://github.com/11ty/11ty-logo/issues"
   },
   "homepage": "https://github.com/11ty/11ty-logo#readme",
-  "dependencies": {
-    "@11ty/eleventy": "^0.3.0"
-  },
   "devDependencies": {
+    "@11ty/eleventy": "^0.3.0",
     "connect": "^3.6.5",
     "serve-static": "^1.13.1",
     "puppeteer": "^0.13.0"
