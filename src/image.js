@@ -5,11 +5,12 @@ const puppeteer = require("puppeteer");
 const sitePath = path.resolve(__dirname, "../_site/");
 const IMAGE_FILENAME_PREFIX = "img/logo";
 const dimensions = [
-	[1569, 2186],
-	[784, 1093],
-	[392, 546],
-	[800, 800],
-	[400, 400]
+	[1569, 2186], // original aspect ratio 4x
+	[784, 1093], // original aspect ratio 2x
+	[800, 800], // square 2x
+	[400, 400], // square 1x
+	[300, 418], // image linked from github repo
+	[96, 96] // favicon
 ];
 
 let server = connect().use(serveStatic(sitePath)).listen(8099, async function() {
@@ -26,14 +27,15 @@ let server = connect().use(serveStatic(sitePath)).listen(8099, async function() 
 		console.error("Could not find the body element!");
 	} else {
 		for( let dimension of dimensions ) {
+			let [width, height, scale] = dimension;
 			await page.setViewport({
-				width: dimension[0],
-				height: dimension[1],
-				deviceScaleFactor: 2
+				width: width,
+				height: height,
+				deviceScaleFactor: scale || 1
 			});
 
 			// Save just logo
-			let imageFilename = `${IMAGE_FILENAME_PREFIX}-${dimension[0]}x${dimension[1]}.png`;
+			let imageFilename = `${IMAGE_FILENAME_PREFIX}-${width}x${height}.png`;
 			await bodyEl.screenshot({
 				path: imageFilename,
 				omitBackground: true
