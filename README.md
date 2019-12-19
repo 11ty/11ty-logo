@@ -2,22 +2,14 @@
 
 11ty logo built for a browser. 
 
-![11ty or eleventy](logo.png)
+![11ty or eleventy](img/logo-400x400.png)
 
 ## Build
 
-Build variations using [`eleventy`](https://github.com/11ty/eleventy).
-
-### Generate templates
-
-```
-npm run default
-```
-
-### Automatically generate a transparent background logo image
-
-Uses headless Chrome and Puppeteer
+To automatically generate a variety of sized transparent background raster logo images from the original SVG:
 
 ```
 npm run image
 ```
+
+(Uses headless Chrome and Puppeteer)

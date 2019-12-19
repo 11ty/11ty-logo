@@ -1,3 +1,3 @@
 module.exports = {
-	"templateFormats": ["njk", "jpg", "css", "png"]
+	"templateFormats": ["njk", "jpg", "css", "png", "svg"]
 };

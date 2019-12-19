@@ -1,8 +1,8 @@
 {
   "name": "@11ty/logo",
-  "version": "1.0.5",
+  "version": "2.0.0",
   "description": "11ty logo built for a browser.",
-  "main": "logo.png",
+  "main": "img/logo.svg",
   "scripts": {
     "default": "npx @11ty/eleventy --formats=njk,css",
     "image": "npm run default && node src/image.js"
@@ -19,6 +19,13 @@
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/11ty/11ty-logo/issues"
+  },
+  "funding": {
+    "type": "opencollective",
+    "url": "https://opencollective.com/11ty"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "homepage": "https://github.com/11ty/11ty-logo#readme",
   "devDependencies": {
