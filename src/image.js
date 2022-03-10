@@ -9,7 +9,8 @@ const dimensions = [
 	[784, 1093], // original aspect ratio 2x
 	[800, 800], // square 2x
 	[400, 400], // square 1x
-	[300, 418], // image linked from github repo
+	[300, 418], // old image linked from github repo
+	[200, 200], // new image linked from github repo
 	[96, 96] // favicon
 ];
 
